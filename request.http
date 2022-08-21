@@ -1,0 +1,55 @@
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "le-dat1",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "name": "le-dat",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/post/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZlMDlmZTc2MWFkNzYyZGM0ZTQ0OWQiLCJpYXQiOjE2NjA4MTU4Nzd9.7zJgvheuvDR2ElvNjUsreBAHByeCmX0Xp9sXGWTkQXM
+
+{
+    "title": "post 3",
+    "description": "description about post 3",
+    "url": "https://www.google.com.vn/",
+    "status": "LEARNING"
+}
+
+
+###
+GET http://localhost:5000/api/post/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZkMDhhNTliNTNkZTdhYWEyYzYzMzQiLCJpYXQiOjE2NjA4MzQ0MTB9.ZEPICPCrDgIpgwInDJl41ePG2WlbLkLa7YjEdjOG_wk
+
+###
+PUT http://localhost:5000/api/post/62fdfe4ea22e2f6369156cfa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZkMDhhNTliNTNkZTdhYWEyYzYzMzQiLCJpYXQiOjE2NjA4MzQ0MTB9.ZEPICPCrDgIpgwInDJl41ePG2WlbLkLa7YjEdjOG_wk
+
+{
+    "title": "post 1",
+    "description": "description about post 1 AHIHI test",
+    "url": "https://www.google.com.vn/",
+    "status": "LEARNED"
+}
+###
+DELETE http://localhost:5000/api/post/62fdfe4ea22e2f6369156cfa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZkMDhhNTliNTNkZTdhYWEyYzYzMzQiLCJpYXQiOjE2NjA4MzQ0MTB9.ZEPICPCrDgIpgwInDJl41ePG2WlbLkLa7YjEdjOG_wk
+
+
+###
+GET  http://localhost:5000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmZkMDhhNTliNTNkZTdhYWEyYzYzMzQiLCJpYXQiOjE2NjA4MzQ0MTB9.ZEPICPCrDgIpgwInDJl41ePG2WlbLkLa7YjEdjOG_wk
